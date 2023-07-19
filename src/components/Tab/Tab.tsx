@@ -14,9 +14,10 @@ export const Tab = () => {
         display: "flex",
         alignItems: "flex-end",
         justifyContent: "space-between",
+        marginBottom: "50px",
       }}
     >
-      <Typography color={"#383874"} variant="h4">
+      <Typography color={"#383874"} fontWeight={500} variant="h4">
         Regulation enforcement performance
       </Typography>
       <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
@@ -76,9 +77,7 @@ export const Tab = () => {
         </Box>
       </Box>
       <FormControl sx={{ minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-standard-label">
-          Previous month
-        </InputLabel>
+        <InputLabel>Previous month</InputLabel>
         <Select
           sx={{
             boxShadow: "none",

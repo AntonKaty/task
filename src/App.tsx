@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 
 import { Log } from "./components/Log/Log";
@@ -8,17 +8,25 @@ import { Status } from "./components/Status/Status";
 import { Tab } from "./components/Tab/Tab";
 function App() {
   return (
-    <Container maxWidth="xl">
+    <div style={{ padding: "20px" }}>
       <CssBaseline />
 
       <Tab />
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box
+        sx={{
+          display: "flex",
+          gap: "38px",
+          width: "100%",
+          alignItems: "center",
+          marginBottom: "44px",
+        }}
+      >
         <Status />
         <Performance />
         <Overview />
       </Box>
       <Log />
-    </Container>
+    </div>
   );
 }
 

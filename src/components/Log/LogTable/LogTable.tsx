@@ -1,4 +1,3 @@
-import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -37,32 +36,156 @@ const rows = [
 
 export const LogTable = () => {
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableContainer>
+      <Table sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow>
-            <TableCell>Impacted KPI</TableCell>
-            <TableCell align="left">Impacted Sub-KPI</TableCell>
-            <TableCell align="left">Impacted VC step</TableCell>
-            <TableCell align="left">Geography</TableCell>
-            <TableCell align="left">Description</TableCell>
-            <TableCell align="left">Owner</TableCell>
+            <TableCell
+              sx={{
+                fontSize: "10px",
+                color: "#383874",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
+            >
+              Impacted KPI
+            </TableCell>
+            <TableCell
+              sx={{
+                fontSize: "10px",
+                color: "#383874",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
+              align="left"
+            >
+              Impacted Sub-KPI
+            </TableCell>
+            <TableCell
+              sx={{
+                fontSize: "10px",
+                color: "#383874",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
+              align="left"
+            >
+              Impacted VC step
+            </TableCell>
+            <TableCell
+              sx={{
+                fontSize: "10px",
+                color: "#383874",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
+              align="left"
+            >
+              Geography
+            </TableCell>
+            <TableCell
+              sx={{
+                fontSize: "10px",
+                color: "#383874",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
+              align="left"
+            >
+              Description
+            </TableCell>
+            <TableCell
+              sx={{
+                fontSize: "10px",
+                color: "#383874",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
+              align="left"
+            >
+              Owner
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row, idx) => (
             <TableRow
               key={idx}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              sx={{
+                "&:last-child td, &:last-child th": { border: 0 },
+                fontSize: "10px",
+                color: "#383874",
+                textTransform: "uppercase",
+                fontWeight: 400,
+              }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell
+                sx={{
+                  fontSize: "10px",
+                  color: "#383874",
+                  textTransform: "uppercase",
+                  fontWeight: 400,
+                }}
+                component="th"
+                scope="row"
+              >
                 {row.impactedKPI}
               </TableCell>
-              <TableCell align="left">{row.impactedSubKPI}</TableCell>
-              <TableCell align="left">{row.impactedVCStep}</TableCell>
-              <TableCell align="left">{row.geography}</TableCell>
-              <TableCell align="left">{row.description}</TableCell>
-              <TableCell align="left">{row.owner}</TableCell>
+              <TableCell
+                sx={{
+                  fontSize: "10px",
+                  color: "#383874",
+                  textTransform: "uppercase",
+                  fontWeight: 400,
+                }}
+                align="left"
+              >
+                {row.impactedSubKPI}
+              </TableCell>
+              <TableCell
+                sx={{
+                  fontSize: "10px",
+                  color: "#383874",
+                  textTransform: "uppercase",
+                  fontWeight: 400,
+                }}
+                align="left"
+              >
+                {row.impactedVCStep}
+              </TableCell>
+              <TableCell
+                sx={{
+                  fontSize: "10px",
+                  color: "#383874",
+                  textTransform: "uppercase",
+                  fontWeight: 400,
+                }}
+                align="left"
+              >
+                {row.geography}
+              </TableCell>
+              <TableCell
+                sx={{
+                  fontSize: "10px",
+                  color: "#383874",
+                  textTransform: "uppercase",
+                  fontWeight: 400,
+                }}
+                align="left"
+              >
+                {row.description}
+              </TableCell>
+              <TableCell
+                sx={{
+                  fontSize: "10px",
+                  color: "#383874",
+                  textTransform: "uppercase",
+                  fontWeight: 400,
+                }}
+                align="left"
+              >
+                {row.owner}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
