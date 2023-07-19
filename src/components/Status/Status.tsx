@@ -11,10 +11,10 @@ const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 export const Status = () => {
   return (
-    <>
-      <Typography variant="h5">Regulation Enforcement Status</Typography>
-      <Box sx={{ background: "rgba(255, 255, 255, 0.90)" }}>
-        <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <Typography>Regulation Enforcement Status</Typography>
+      <Box sx={{ background: "rgba(255, 255, 255, 0.90)", padding: "28px" }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box>
             <Typography>Current state</Typography>
             <Typography>60%</Typography>
@@ -46,6 +46,6 @@ export const Status = () => {
           </Pie>
         </PieChart>
       </Box>
-    </>
+    </Box>
   );
 };

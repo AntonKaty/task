@@ -12,7 +12,7 @@ function App() {
       <CssBaseline />
 
       <Tab />
-      <Box>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Status />
         <Performance />
         <Overview />

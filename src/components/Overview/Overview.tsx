@@ -12,11 +12,10 @@ export const Overview = () => {
     <Box
       sx={{
         display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
+        flexDirection: "column",
       }}
     >
-      <Typography variant="h4">Regulation activation overview</Typography>
+      <Typography>Regulation activation overview</Typography>
       <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>
         <Select
