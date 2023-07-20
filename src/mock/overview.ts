@@ -1,4 +1,4 @@
-import I from "../assets/instrument.svg";
+import I from "../assets/instrument.svg"
 
 interface IInstrument {
   name: string;

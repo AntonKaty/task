@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { overview } from "../../mock/overview";
-
 const StyleMap = {
   Active: {
     color: "#23A698",
@@ -147,20 +146,35 @@ export const Overview = () => {
             overflow: "hidden",
             width: "70%",
             paddingLeft: "10px",
+
+            overflowY: "scroll",
+            height: "300px",
+            scrollbarWidth: "thin",
+            "&::-webkit-scrollbar": {
+              width: "0.4em",
+            },
+            "&::-webkit-scrollbar-track": {
+              background: "#f1f1f1",
+            },
+            "&::-webkit-scrollbar-thumb": {
+              backgroundColor: "#888",
+            },
+            "&::-webkit-scrollbar-thumb:hover": {
+              background: "#555",
+            },
           }}
         >
           {overview.map(el => (
             <Box
               sx={{
                 display: "flex",
-                alignItems: "center",
-                gap: "10px",
                 justifyContent: "space-between",
+                alignItems: "center",
                 marginBottom: "12px",
               }}
             >
-              <img src={el.icon} />
-              <Typography>{el.name}</Typography>
+              <img style={{ marginRight: "6px" }} src={el.icon} />
+              <Typography mr="12px">{el.name}</Typography>
 
               <Typography fontSize="12px" sx={StyleMap[el.status]}>
                 {el.status}

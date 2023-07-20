@@ -1,12 +1,14 @@
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import { Box, Typography } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-
 function createData(
   impactedKPI: string,
+  percentage: string,
   impactedSubKPI: string,
   impactedVCStep: string,
   geography: string,
@@ -15,6 +17,7 @@ function createData(
 ) {
   return {
     impactedKPI,
+    percentage,
     impactedSubKPI,
     impactedVCStep,
     geography,
@@ -26,6 +29,7 @@ function createData(
 const rows = [
   createData(
     "Regulation enforcement rate",
+    "10%",
     "Regulation clause​​",
     "Plan / Detect",
     "Riyadh",
@@ -34,6 +38,7 @@ const rows = [
   ),
   createData(
     "Regulation enforcement rate",
+    "10%",
     "Regulation clause​​",
     "Plan / Detect",
     "Riyadh",
@@ -42,6 +47,7 @@ const rows = [
   ),
   createData(
     "Regulation enforcement rate",
+    "10%",
     "Regulation clause​​",
     "Plan / Detect",
     "Riyadh",
@@ -50,6 +56,7 @@ const rows = [
   ),
   createData(
     "Regulation enforcement rate",
+    "10%",
     "Regulation clause​​",
     "Plan / Detect",
     "Riyadh",
@@ -58,6 +65,7 @@ const rows = [
   ),
   createData(
     "Regulation enforcement rate",
+    "10%",
     "Regulation clause​​",
     "Plan / Detect",
     "Riyadh",
@@ -160,6 +168,23 @@ export const LogTable = () => {
                 scope="row"
               >
                 {row.impactedKPI}
+                <Box
+                  sx={{
+                    padding: "2px 4px",
+                    background: "rgba(255, 112, 139, 0.10)",
+                    width: "40px",
+                    borderRadius: "4px",
+                    marginTop: "4px",
+                  }}
+                >
+                  <Typography
+                    textAlign="center"
+                    fontSize="12px"
+                    sx={{ color: "#FF708B" }}
+                  >
+                    {row.percentage}
+                  </Typography>
+                </Box>
               </TableCell>
               <TableCell
                 sx={{
@@ -170,6 +195,23 @@ export const LogTable = () => {
                 align="left"
               >
                 {row.impactedSubKPI}
+                <Box
+                  sx={{
+                    padding: "2px 4px",
+                    background: "rgba(49, 207, 128, 0.10)",
+                    width: "40px",
+                    borderRadius: "4px",
+                    marginTop: "4px",
+                  }}
+                >
+                  <Typography
+                    textAlign="center"
+                    fontSize="12px"
+                    sx={{ color: "#23A698" }}
+                  >
+                    {row.percentage}
+                  </Typography>
+                </Box>
               </TableCell>
               <TableCell
                 sx={{
@@ -189,7 +231,10 @@ export const LogTable = () => {
                 }}
                 align="left"
               >
-                {row.geography}
+                <Box display="flex" alignItems="center">
+                  <FmdGoodIcon style={{ color: "#C4C4C4" }} />
+                  {row.geography}
+                </Box>
               </TableCell>
               <TableCell
                 sx={{
