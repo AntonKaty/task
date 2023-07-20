@@ -56,18 +56,13 @@ export const Overview = () => {
         pb="28px"
       >
         <Box>
-          <FormControl variant="outlined" sx={{ m: 1, minWidth: 90 }}>
+          <FormControl variant="outlined" sx={{ width: 83, height: 42 }}>
             <InputLabel
               sx={{ color: "#383874", fontWeight: "700", fontSize: "14px" }}
-              id="demo-simple-select-standard-label"
             >
               All
             </InputLabel>
-            <Select
-              labelId="demo-simple-select-standard-label"
-              id="demo-simple-select-standard"
-              label="Top"
-            >
+            <Select label="Top">
               <MenuItem value="">
                 <em>All</em>
               </MenuItem>
@@ -99,42 +94,63 @@ export const Overview = () => {
               width={100}
               height={100}
             />
-            <Typography fontSize="12px" display="flex" alignItems="center">
-              <Box
-                mr="6px"
-                sx={{
-                  width: "10px",
-                  height: "10px",
-                  border: " 2px solid #FF708B",
-                  borderRadius: "50%",
-                }}
-              ></Box>
-              Not activated
-            </Typography>
-            <Typography fontSize="12px" display="flex" alignItems="center">
-              <Box
-                mr="6px"
-                sx={{
-                  width: "10px",
-                  height: "10px",
-                  border: " 2px solid #23A698",
-                  borderRadius: "50%",
-                }}
-              ></Box>
-              Activated
-            </Typography>
-            <Typography fontSize="12px" display="flex" alignItems="center">
-              <Box
-                mr="6px"
-                sx={{
-                  width: "10px",
-                  height: "10px",
-                  border: " 2px solid #FFBA69",
-                  borderRadius: "50%",
-                }}
-              ></Box>
-              Partially active
-            </Typography>
+            <Box textAlign="center" mt="5px">
+              <Typography
+                sx={{ fontSize: "16px", color: "#383874", fontWeight: "600" }}
+              >
+                37%
+              </Typography>
+              <Typography fontSize="12px" display="flex" alignItems="center">
+                <Box
+                  mr="6px"
+                  sx={{
+                    width: "10px",
+                    height: "10px",
+                    backgroundColor: "#FF708B",
+                    borderRadius: "50%",
+                  }}
+                ></Box>
+                Not activated
+              </Typography>
+            </Box>
+            <Box textAlign="center" mt="5px">
+              <Typography
+                sx={{ fontSize: "16px", color: "#383874", fontWeight: "600" }}
+              >
+                47%
+              </Typography>
+              <Typography fontSize="12px" display="flex" alignItems="center">
+                <Box
+                  mr="6px"
+                  sx={{
+                    width: "10px",
+                    height: "10px",
+                    backgroundColor: "#23A698",
+                    borderRadius: "50%",
+                  }}
+                ></Box>
+                Activated
+              </Typography>
+            </Box>
+            <Box textAlign="center" mt="5px">
+              <Typography
+                sx={{ fontSize: "16px", color: "#383874", fontWeight: "600" }}
+              >
+                16%
+              </Typography>
+              <Typography fontSize="12px" display="flex" alignItems="center">
+                <Box
+                  mr="6px"
+                  sx={{
+                    width: "10px",
+                    height: "10px",
+                    backgroundColor: "#FFBA69",
+                    borderRadius: "50%",
+                  }}
+                ></Box>
+                Partially active
+              </Typography>
+            </Box>
           </Box>
         </Box>
         <Divider orientation="vertical" />
@@ -146,22 +162,6 @@ export const Overview = () => {
             overflow: "hidden",
             width: "70%",
             paddingLeft: "10px",
-
-            overflowY: "scroll",
-            height: "300px",
-            scrollbarWidth: "thin",
-            "&::-webkit-scrollbar": {
-              width: "0.4em",
-            },
-            "&::-webkit-scrollbar-track": {
-              background: "#f1f1f1",
-            },
-            "&::-webkit-scrollbar-thumb": {
-              backgroundColor: "#888",
-            },
-            "&::-webkit-scrollbar-thumb:hover": {
-              background: "#555",
-            },
           }}
         >
           {overview.map(el => (
@@ -174,7 +174,7 @@ export const Overview = () => {
               }}
             >
               <img style={{ marginRight: "6px" }} src={el.icon} />
-              <Typography mr="12px">{el.name}</Typography>
+              <Typography color="#383874">{el.name}</Typography>
 
               <Typography fontSize="12px" sx={StyleMap[el.status]}>
                 {el.status}

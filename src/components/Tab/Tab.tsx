@@ -58,6 +58,7 @@ export const Tab = () => {
               width: "20px",
               height: "16px",
               background: "#FF708B",
+              borderRadius: "2px",
             }}
           ></Box>
           <Typography fontSize="12px" color="#383874">
@@ -70,6 +71,7 @@ export const Tab = () => {
               width: "20px",
               height: "16px",
               background: "#FFBA69",
+              borderRadius: "2px",
             }}
           ></Box>
           <Typography fontSize="12px" color="#383874">
@@ -82,6 +84,7 @@ export const Tab = () => {
               width: "20px",
               height: "16px",
               background: "#23A698",
+              borderRadius: "2px",
             }}
           ></Box>
           <Typography fontSize="12px" color="#383874">

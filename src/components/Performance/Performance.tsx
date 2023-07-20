@@ -55,18 +55,13 @@ export const Performance = () => {
             " 0px 3px 2px 0px rgba(108, 73, 172, 0.02), 0px 6px 5px 0px rgba(108, 73, 172, 0.03), 0px 12px 10px 0px rgba(108, 73, 172, 0.04), 0px 22.3363094329834px 17.869047164916992px 0px rgba(108, 73, 172, 0.04), 0px 41.777610778808594px 33.422088623046875px 0px rgba(108, 73, 172, 0.05), 0px 100px 80px 0px rgba(108, 73, 172, 0.07);",
         }}
       >
-        <FormControl variant="outlined" sx={{ m: 1, minWidth: 90 }}>
+        <FormControl variant="outlined" sx={{ width: 83, height: 42 }}>
           <InputLabel
             sx={{ color: "#383874", fontWeight: "700", fontSize: "14px" }}
-            id="demo-simple-select-standard-label"
           >
             Top
           </InputLabel>
-          <Select
-            labelId="demo-simple-select-standard-label"
-            id="demo-simple-select-standard"
-            label="Top"
-          >
+          <Select label="Top">
             <MenuItem value="">
               <em>KSA</em>
             </MenuItem>
@@ -79,6 +74,7 @@ export const Performance = () => {
           display="flex"
           justifyContent="space-between"
           flexDirection="column"
+          mt="25px"
         >
           {mock.map(el => (
             <Box mb="10px">
